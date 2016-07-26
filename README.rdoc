@@ -2,4 +2,4 @@
 
   This project will be a cross between a blog, pinterest and maybe even tumblr. It will use the gem paperclip and allow the user to attach photo's and a brief description of what they have posted. I do plan on having the ability for users to sign in to the app as well.
 
-## GEMS 
+== GEMS 
