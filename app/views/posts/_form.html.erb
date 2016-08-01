@@ -1,0 +1,25 @@
+<div class="text-center">
+  <% if @post.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@post.errors.count, "error") %> Stopped this Postfrom saving</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group">
+  <%= form.label :description %>
+  <%= form.text_field :description, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= form.label "Photo" %><br>
+  <%= form.file_field :avatar %>
+</div>
+
+<%= form.submit class: "btn btn-primary" %>
+<%= link_to 'Cancel', :back, class: "btn btn-default" %>

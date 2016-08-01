@@ -2,5 +2,7 @@
 
   <h1>Showing Post Number: <%= @post.id %></h1>
   <p><%= @post.description %></p>
+
+  <%= image_tag @post.avatar.url(:medium) %>
   
 </div>
