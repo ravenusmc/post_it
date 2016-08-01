@@ -2,7 +2,8 @@
 
   <h1>Showing Post Number: <%= @post.id %></h1>
   <p><%= @post.description %></p>
-
-  <%= image_tag @post.avatar.url(:medium) %>
+  <% if @post.avatar_file_name != nil %>
+    <%= image_tag @post.avatar.url(:medium), class: "img-responsive" %>
+  <% end %>
   
 </div>
