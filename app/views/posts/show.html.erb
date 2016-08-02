@@ -5,5 +5,7 @@
   <% if @post.avatar_file_name != nil %>
     <%= image_tag @post.avatar.url(:medium), class: "img-responsive" %>
   <% end %>
+  <%= link_to "Home", root_path %>
+  <%= link_to "Edit", edit_post_path %>
   
 </div>

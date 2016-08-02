@@ -1,9 +1,11 @@
 <div class="container">
-  
+
   <h1>Edit Post!</h1>
 
   <%= form_for (@post) do |form| %>
     <%= render partial: form %>
   <% end %>
+
+  <%= link_to "Home", root_path, class: "btn btn-info" %>
 
 </div>

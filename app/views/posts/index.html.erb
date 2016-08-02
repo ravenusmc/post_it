@@ -4,6 +4,9 @@
   <% @posts.each do |post| %>
 
     <p><%= post.id %>. <%= post.description %></p>
+    <%= image_tag post.avatar.url(:medium), class: "img-responsive" %>
+    <%= link_to "Edit", edit_post_path(post) %>
+    <%= link_to "Show", post_path(post) %>
   <% end %>
 
 </div>
