@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container center">
   <h1>Listing all Posts</h1>
   
   <%= link_to "New Post", new_post_path %>
@@ -6,7 +6,9 @@
   <% @posts.each do |post| %>
 
     <p><%= post.id %>. <%= post.description %></p>
-    <%= image_tag post.avatar.url(:medium), class: "img-responsive" %>
+    <div class="container">
+      <p><%= image_tag post.avatar.url(:medium), class: "img-responsive" %></p>
+    </div>
     <%= link_to "Edit", edit_post_path(post) %>
     <%= link_to "Show", post_path(post) %>
     <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you Sure?" }, class: "ui inverted red button" %>

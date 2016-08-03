@@ -21,5 +21,9 @@
   <%= form.file_field :avatar %>
 </div>
 
+<div class="form-group hide">
+  <%= form.number_field :user_id, value: current_user.id %>
+</div>
+
 <%= form.submit class: "btn btn-primary" %>
 <%= link_to 'Cancel', :back, class: "btn btn-default" %>

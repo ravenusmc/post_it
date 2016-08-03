@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   validates :description, :presence => true
+
+  belongs_to :user
 end
