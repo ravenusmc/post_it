@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h1>Create Your Comment</h1>
+
+  <%= form_for [@post, @comment] do |form| %>
+    <%= render partial: form %>
+  <% end %>
+
+  <%= link_to "Home", root_path, class: "btn btn-info" %>
+
+</div>

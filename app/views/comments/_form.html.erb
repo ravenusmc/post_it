@@ -1,0 +1,29 @@
+<div class="text-center">
+  <% if @comment.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@comment.errors.count, "error") %> Stopped this Postfrom saving</h2>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group">
+  <%= form.label :name %><br>
+  <%= form.text_field :name, class: "form-control", placeholder: "Your Name" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :description %>
+  <%= form.text_field :description, class: "form-control", placeholder: "Speak Your Mind!!" %>
+</div>
+
+<div class="form-group hide">
+  <%= form.number_field :user_id, value: current_user.id %>
+</div>
+
+<%= form.submit class: "btn btn-primary" %>
+<%= link_to 'Cancel', :back, class: "btn btn-default" %>
