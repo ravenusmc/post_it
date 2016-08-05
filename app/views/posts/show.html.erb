@@ -8,12 +8,12 @@
   <%= link_to "Home", root_path %>
   <%= link_to "Edit", edit_post_path %>
 
-      <h2><em>Comments:</em></h2>
-  <% @post.comments.each do |comment| %>
-    <p><%= comment.name %> says:</p>
-    <p><%= comment.description %></p>
-    <hr>
-  <% end %>
+  <h2><em>Comments:</em></h2>
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.name %> says:</p>
+      <p><%= comment.description %></p>
+      <hr>
+    <% end %>
   <%= link_to "New Comment", new_post_comment_path(@post), class: "ui inverted blue button active" %>
 </div>
   
