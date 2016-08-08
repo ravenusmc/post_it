@@ -4,4 +4,4 @@
 
 == GEMS 
 
-  Bootstrap, Semantic-UI, PaperClip, devise 
+  Bootstrap, Semantic-UI, PaperClip, devise, kaminari

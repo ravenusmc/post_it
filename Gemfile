@@ -49,5 +49,6 @@ gem 'bootstrap-sass'
 gem 'semantic-ui-sass'
 gem "paperclip"
 gem 'devise'
+gem 'kaminari'
 
 
