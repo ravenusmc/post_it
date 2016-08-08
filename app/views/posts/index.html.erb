@@ -1,15 +1,16 @@
 <div class="container center">
   <h1>Listing all Posts</h1>
   
-  <%= link_to "New Post", new_post_path %>
+  <%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
 
   <% @posts.each do |post| %>
-
-    <p><%= post.id %>. <%= post.description %></p>
-      <p class="align"><%= image_tag post.avatar.url(:medium), class: "img-responsive" %></p>
-    <%= link_to "Edit", edit_post_path(post) %>
-    <%= link_to "Show", post_path(post) %>
-    <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you Sure?" }, class: "ui inverted red button" %>
+    <div class="wrapper">
+      <p class="round-image-50"><%= image_tag post.avatar.url(:medium), class: "img-responsive" %></p>
+      <p><%= post.id %>. <%= post.description %></p>
+      <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning" %>
+      <%= link_to "Show", post_path(post), class: "btn btn-info" %>
+      <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you Sure?" }, class: "ui inverted red button" %>
+    </div>
   <% end %>
 <%= paginate @posts %>
 </div>
